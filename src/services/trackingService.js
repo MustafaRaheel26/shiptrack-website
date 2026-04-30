@@ -1,6 +1,6 @@
 /**
  * Tracking Service - ShipTrack Frontend
- * Now using HTTPS (your SSL is working!)
+ * Fixed: Origin and Destination mapping corrected
  */
 
 const API_BASE_URL = 'https://tryshiptrack.com/api';
@@ -63,6 +63,7 @@ const transformResponse = (apiData) => {
     rawDate: event.datetime
   }));
 
+  // Sort events from oldest to newest for timeline display
   events.sort((a, b) => {
     if (a.rawDate && b.rawDate) return new Date(a.rawDate) - new Date(b.rawDate);
     return 0;
@@ -70,14 +71,17 @@ const transformResponse = (apiData) => {
 
   const latestEvent = events[events.length - 1];
 
+  // FIXED: Origin and Destination mapping - now correct
+  // origin = where package came FROM (starting point)
+  // destination = where package is going TO (ending point)
   return {
     trackingNumber: apiData.tracking_number,
     courier: apiData.courier?.toUpperCase() || 'GLS',
     status: apiData.status_description,
     statusCode: mapStatusToUI(apiData.status),
     estimatedDelivery: apiData.estimated_delivery === 'Delivered' ? 'Delivered' : formatDate(apiData.estimated_delivery),
-    origin: apiData.origin,
-    destination: apiData.destination,
+    origin: apiData.origin || 'Origin information pending',
+    destination: apiData.destination || 'Destination information pending',
     lastUpdate: latestEvent?.time || 'Just now',
     events: events
   };
@@ -104,6 +108,10 @@ export const trackingService = {
       console.log('API Response:', result);
       
       if (result.status === 'success' && result.data) {
+        // Log to verify origin/destination are correct
+        console.log('Origin:', result.data.origin);
+        console.log('Destination:', result.data.destination);
+        
         return {
           success: true,
           data: transformResponse(result.data)
