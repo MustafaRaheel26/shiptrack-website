@@ -22,7 +22,6 @@ export default function TrackingResultCard({ data }) {
     }
   };
 
-  // Format status display text (short version for badge)
   const getStatusDisplayText = (statusCode) => {
     switch (statusCode) {
       case 'delivered': return 'DELIVERED';
@@ -40,7 +39,7 @@ export default function TrackingResultCard({ data }) {
         <div>
           <div className="flex items-center gap-3 mb-2">
             <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-200">Tracking Number</p>
-            <div className={`px-2 py-0.5 rounded bg-white/10 border border-white/20 text-[10px] font-black uppercase tracking-widest flex items-center gap-1.5 ${getStatusColor(data.statusCode).replace('bg-', 'bg-white/10 text-white').replace('text-', 'text-')}`}>
+            <div className={`px-2 py-0.5 rounded bg-white/10 border border-white/20 text-[10px] font-black uppercase tracking-widest flex items-center gap-1.5`}>
               {getStatusIcon(data.statusCode)}
               <span>{getStatusDisplayText(data.statusCode)}</span>
             </div>
@@ -56,7 +55,7 @@ export default function TrackingResultCard({ data }) {
         </div>
       </div>
 
-      {/* Current Status - This shows the current status description (like mobile app) */}
+      {/* Current Status Section */}
       <div className="px-8 pt-6 pb-2">
         <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
           <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Current Status</p>
@@ -64,15 +63,15 @@ export default function TrackingResultCard({ data }) {
         </div>
       </div>
 
-      {/* Details Grid */}
+      {/* Details Grid - ORIGIN and DESTINATION are now CORRECT */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
         <div>
           <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Origin</p>
-          <p className="text-lg font-black text-slate-900 leading-tight">{data.origin}</p>
+          <p className="text-lg font-black text-slate-900 leading-tight">{data.destination}</p>
         </div>
         <div>
           <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Destination</p>
-          <p className="text-lg font-black text-slate-900 leading-tight">{data.destination}</p>
+          <p className="text-lg font-black text-slate-900 leading-tight">{data.origin}</p>
         </div>
         <div>
           <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Est. Delivery</p>
@@ -84,8 +83,4 @@ export default function TrackingResultCard({ data }) {
       </div>
     </div>
   );
-}
-
-function Globe({ className }) {
-    return <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>;
 }

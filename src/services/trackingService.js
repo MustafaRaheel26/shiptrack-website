@@ -1,6 +1,6 @@
 /**
  * Tracking Service - ShipTrack Frontend
- * Fixed: Origin and Destination mapping corrected
+ * Matches mobile app behavior - shows "not found" for invalid numbers
  */
 
 const API_BASE_URL = 'https://tryshiptrack.com/api';
@@ -63,7 +63,6 @@ const transformResponse = (apiData) => {
     rawDate: event.datetime
   }));
 
-  // Sort events from oldest to newest for timeline display
   events.sort((a, b) => {
     if (a.rawDate && b.rawDate) return new Date(a.rawDate) - new Date(b.rawDate);
     return 0;
@@ -71,20 +70,42 @@ const transformResponse = (apiData) => {
 
   const latestEvent = events[events.length - 1];
 
-  // FIXED: Origin and Destination mapping - now correct
-  // origin = where package came FROM (starting point)
-  // destination = where package is going TO (ending point)
   return {
     trackingNumber: apiData.tracking_number,
     courier: apiData.courier?.toUpperCase() || 'GLS',
     status: apiData.status_description,
     statusCode: mapStatusToUI(apiData.status),
     estimatedDelivery: apiData.estimated_delivery === 'Delivered' ? 'Delivered' : formatDate(apiData.estimated_delivery),
-    origin: apiData.origin || 'Origin information pending',
-    destination: apiData.destination || 'Destination information pending',
+    origin: apiData.origin,
+    destination: apiData.destination,
     lastUpdate: latestEvent?.time || 'Just now',
     events: events
   };
+};
+
+// Helper function to check if tracking data is valid (has actual events)
+const isValidTrackingData = (apiData) => {
+  // Check if there are actual tracking events
+  if (!apiData.events || apiData.events.length === 0) {
+    return false;
+  }
+  
+  // Check if courier is null or unknown
+  if (!apiData.courier || apiData.courier === null) {
+    return false;
+  }
+  
+  // Check if status is 'pending' with no real updates
+  if (apiData.status === 'pending' && apiData.events.length === 0) {
+    return false;
+  }
+  
+  // Check if location is 'Unknown' and no events
+  if (apiData.location === 'Unknown' && apiData.events.length === 0) {
+    return false;
+  }
+  
+  return true;
 };
 
 export const trackingService = {
@@ -108,26 +129,44 @@ export const trackingService = {
       console.log('API Response:', result);
       
       if (result.status === 'success' && result.data) {
-        // Log to verify origin/destination are correct
-        console.log('Origin:', result.data.origin);
-        console.log('Destination:', result.data.destination);
+        const apiData = result.data;
         
+        // CRITICAL: Check if this is actually valid tracking data
+        // Mobile app logic: If no events or courier is null -> show "not found"
+        if (!isValidTrackingData(apiData)) {
+          console.log('Invalid tracking number detected - showing not found message');
+          return {
+            success: false,
+            error: 'Tracking information not available for this number. Please verify and try again.'
+          };
+        }
+        
+        // Also check for empty events array (no tracking history)
+        if (apiData.events && apiData.events.length === 0) {
+          return {
+            success: false,
+            error: 'Tracking information not available for this number. Please verify and try again.'
+          };
+        }
+        
+        console.log('Valid tracking data found');
         return {
           success: true,
-          data: transformResponse(result.data)
+          data: transformResponse(apiData)
         };
       }
       
+      // If API returns error status
       return {
         success: false,
-        error: result.message || 'Unable to track shipment'
+        error: result.message || 'Tracking information not available for this number. Please verify and try again.'
       };
       
     } catch (error) {
       console.error('API Error:', error);
       return {
         success: false,
-        error: 'Network error. Please check your connection.'
+        error: 'Network error. Please check your connection and try again.'
       };
     }
   }
