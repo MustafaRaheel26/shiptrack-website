@@ -1,10 +1,11 @@
 /**
  * Tracking Service - ShipTrack Frontend
+ * Uses CORS proxy to bypass SSL issues
  */
 
-// Use HTTP to bypass SSL certificate issue (temporary)
-// Once SSL is fixed on your server, change back to https://
-const API_BASE_URL = 'http://tryshiptrack.com/api';
+// Use a public CORS proxy (free, no registration)
+const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
+const API_URL = 'http://tryshiptrack.com/api/track.php';
 
 const formatDate = (dateString) => {
   if (!dateString) return 'Pending';
@@ -60,7 +61,7 @@ const transformResponse = (apiData) => {
     time: event.formattedDate || formatDate(event.datetime),
     location: event.location || 'Unknown',
     heading: getMilestoneHeading(event.statusMilestone),
-    description: event.status || 'Status update',
+    description: event.status,
     rawDate: event.datetime
   }));
 
@@ -73,13 +74,13 @@ const transformResponse = (apiData) => {
 
   return {
     trackingNumber: apiData.tracking_number,
-    courier: apiData.courier?.toUpperCase() || 'Carrier',
-    status: apiData.status_description || latestEvent?.description || apiData.status || 'Tracking information available',
+    courier: apiData.courier?.toUpperCase() || 'GLS',
+    status: apiData.status_description,
     statusCode: mapStatusToUI(apiData.status),
     estimatedDelivery: apiData.estimated_delivery === 'Delivered' ? 'Delivered' : formatDate(apiData.estimated_delivery),
-    origin: apiData.origin || 'Origin info pending',
-    destination: apiData.destination || 'Destination info pending',
-    lastUpdate: event?.formattedDate || formatDate(apiData.updated),
+    origin: apiData.origin,
+    destination: apiData.destination,
+    lastUpdate: latestEvent?.time || 'Just now',
     events: events
   };
 };
@@ -96,23 +97,18 @@ export const trackingService = {
     const cleanNumber = trackingNumber.trim().toUpperCase();
     
     try {
-      // Using HTTP to bypass SSL certificate issue
-      const url = `${API_BASE_URL}/track.php?number=${encodeURIComponent(cleanNumber)}`;
-      console.log('Calling API:', url);
+      // Use CORS proxy to bypass browser restrictions
+      const url = `${CORS_PROXY}${encodeURIComponent(`${API_URL}?number=${cleanNumber}`)}`;
+      
+      console.log('Calling API via proxy:', url);
       
       const response = await fetch(url);
-      const result = await response.json();
+      const text = await response.text();
+      const result = JSON.parse(text);
       
       console.log('API Response:', result);
       
       if (result.status === 'success' && result.data) {
-        if (result.data.status === 'error') {
-          return {
-            success: false,
-            error: result.data.error || 'Tracking number not found'
-          };
-        }
-        
         return {
           success: true,
           data: transformResponse(result.data)
@@ -128,7 +124,7 @@ export const trackingService = {
       console.error('API Error:', error);
       return {
         success: false,
-        error: 'Network error. Please check your connection.'
+        error: 'Unable to connect to tracking service. Please try again.'
       };
     }
   }
