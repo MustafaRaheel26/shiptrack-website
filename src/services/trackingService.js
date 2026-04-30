@@ -1,11 +1,9 @@
 /**
  * Tracking Service - ShipTrack Frontend
- * Uses CORS proxy to bypass SSL issues
+ * Now using HTTPS (your SSL is working!)
  */
 
-// Use a public CORS proxy (free, no registration)
-const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
-const API_URL = 'http://tryshiptrack.com/api/track.php';
+const API_BASE_URL = 'https://tryshiptrack.com/api';
 
 const formatDate = (dateString) => {
   if (!dateString) return 'Pending';
@@ -97,14 +95,11 @@ export const trackingService = {
     const cleanNumber = trackingNumber.trim().toUpperCase();
     
     try {
-      // Use CORS proxy to bypass browser restrictions
-      const url = `${CORS_PROXY}${encodeURIComponent(`${API_URL}?number=${cleanNumber}`)}`;
-      
-      console.log('Calling API via proxy:', url);
+      const url = `${API_BASE_URL}/track.php?number=${encodeURIComponent(cleanNumber)}`;
+      console.log('Calling API:', url);
       
       const response = await fetch(url);
-      const text = await response.text();
-      const result = JSON.parse(text);
+      const result = await response.json();
       
       console.log('API Response:', result);
       
@@ -124,7 +119,7 @@ export const trackingService = {
       console.error('API Error:', error);
       return {
         success: false,
-        error: 'Unable to connect to tracking service. Please try again.'
+        error: 'Network error. Please check your connection.'
       };
     }
   }
