@@ -1,9 +1,10 @@
 /**
  * Tracking Service - ShipTrack Frontend
- * Simply calls the backend API like any other third-party API
  */
 
-const API_BASE_URL = 'https://tryshiptrack.com/api';
+// Use HTTP to bypass SSL certificate issue (temporary)
+// Once SSL is fixed on your server, change back to https://
+const API_BASE_URL = 'http://tryshiptrack.com/api';
 
 const formatDate = (dateString) => {
   if (!dateString) return 'Pending';
@@ -56,7 +57,7 @@ const getMilestoneHeading = (statusMilestone) => {
 const transformResponse = (apiData) => {
   const events = (apiData.events || []).map((event, idx) => ({
     id: idx + 1,
-    time: formatDate(event.datetime || event.formattedDate),
+    time: event.formattedDate || formatDate(event.datetime),
     location: event.location || 'Unknown',
     heading: getMilestoneHeading(event.statusMilestone),
     description: event.status || 'Status update',
@@ -78,7 +79,7 @@ const transformResponse = (apiData) => {
     estimatedDelivery: apiData.estimated_delivery === 'Delivered' ? 'Delivered' : formatDate(apiData.estimated_delivery),
     origin: apiData.origin || 'Origin info pending',
     destination: apiData.destination || 'Destination info pending',
-    lastUpdate: formatDate(apiData.updated),
+    lastUpdate: event?.formattedDate || formatDate(apiData.updated),
     events: events
   };
 };
@@ -95,11 +96,14 @@ export const trackingService = {
     const cleanNumber = trackingNumber.trim().toUpperCase();
     
     try {
+      // Using HTTP to bypass SSL certificate issue
       const url = `${API_BASE_URL}/track.php?number=${encodeURIComponent(cleanNumber)}`;
       console.log('Calling API:', url);
       
       const response = await fetch(url);
       const result = await response.json();
+      
+      console.log('API Response:', result);
       
       if (result.status === 'success' && result.data) {
         if (result.data.status === 'error') {
