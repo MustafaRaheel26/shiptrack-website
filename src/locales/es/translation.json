@@ -1,0 +1,282 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "track": "Rastrear",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "blog": "Blog",
+    "privacy": "Privacidad"
+  },
+  "home": {
+    "hero": {
+      "badge": "Inteligencia Logística Global",
+      "title": "Rastrea Tu",
+      "titleSpan": "Envío",
+      "titleEnd": "En Cualquier Lugar",
+      "description": "Ingrese su número de seguimiento para obtener actualizaciones en tiempo real de más de 1,200 transportistas en todo el mundo con absoluta precisión.",
+      "placeholder": "Ingrese el número de seguimiento (ej. ST123456789)",
+      "button": "Rastrear Ahora",
+      "features": "Detección Automática de Transportista | 1,200+ Transportistas"
+    },
+    "trust": {
+      "title": "Transportistas Globales Soportados"
+    },
+    "process": {
+      "badge": "El Proceso",
+      "title": "Cómo ShipTrack Simplifica Tu Logística",
+      "step1": {
+        "number": "01",
+        "title": "Ingrese el Número de Seguimiento",
+        "text": "Pegue su ID de seguimiento proporcionado por el transportista en nuestra plataforma segura."
+      },
+      "step2": {
+        "number": "02",
+        "title": "Detección Automática",
+        "text": "Identificamos automáticamente el transportista correcto de nuestra base de datos de más de 1,200 socios."
+      },
+      "step3": {
+        "number": "03",
+        "title": "Seguimiento en Tiempo Real",
+        "text": "Vea una línea de tiempo detallada del viaje de su paquete por todo el mundo."
+      },
+      "stats": "99.9% Tasa de Detección"
+    },
+    "features": {
+      "global": {
+        "title": "Cobertura Global",
+        "description": "Soporte para más de 1,200 transportistas globales en 220 países y territorios."
+      },
+      "instant": {
+        "title": "Actualizaciones Instantáneas",
+        "description": "Notificaciones de seguimiento en tiempo real y cambios de estado entregados al instante."
+      },
+      "security": {
+        "title": "Protección de Datos",
+        "description": "Seguimiento seguro que respeta su privacidad y garantiza la seguridad del envío."
+      },
+      "analytics": {
+        "title": "Análisis Avanzado",
+        "description": "Información detallada sobre el rendimiento de entrega y tiempos estimados de llegada."
+      }
+    },
+    "blog": {
+      "badge": "Últimos Consejos de Seguimiento",
+      "title": "Guías de Envío y Artículos",
+      "viewAll": "Ver Todo"
+    },
+    "cta": {
+      "title": "¿Listo para rastrear su paquete?",
+      "description": "No se requiere registro. Únase a millones de usuarios que confían en ShipTrack para su monitoreo logístico diario."
+    }
+  },
+  "tracking": {
+    "title": "Rastrea Tu Paquete",
+    "description": "Ingrese su número de seguimiento a continuación para ver actualizaciones en tiempo real y detección de transportista.",
+    "back": "Atrás",
+    "universal": "Seguimiento Universal",
+    "connecting": "Conectando a los Servidores de Transportista...",
+    "notFound": "¡Ups! Envío No Encontrado",
+    "notFoundMessage": "Información de seguimiento no disponible para este número. Por favor verifique e intente nuevamente.",
+    "tryAgain": "Intentar Nuevamente",
+    "downloadApp": "Descargar ShipTrack App",
+    "downloadAppDesc": "Nuestra aplicación móvil proporciona notificaciones push para cada cambio de estado. Nunca pierda una entrega nuevamente."
+  },
+  "trackingCard": {
+    "trackingNumber": "Número de Seguimiento",
+    "carrier": "Detección de Transportista",
+    "currentStatus": "Estado Actual",
+    "origin": "Origen",
+    "destination": "Destino",
+    "estimatedDelivery": "Entrega Estimada",
+    "delivered": "ENTREGADO",
+    "inTransit": "EN TRÁNSITO",
+    "outForDelivery": "EN REPARTO",
+    "exception": "EXCEPCIÓN",
+    "pending": "PENDIENTE"
+  },
+  "timeline": {
+    "title": "Actividad de Seguimiento",
+    "updates": "Actualizaciones",
+    "noEvents": "No hay eventos de seguimiento disponibles aún. Por favor, revise más tarde."
+  },
+  "about": {
+    "mission": {
+      "badge": "Nuestra Misión",
+      "title": "Simplificando la Logística",
+      "titleSpan": "Global",
+      "titleEnd": "para Todos."
+    },
+    "story": {
+      "title": "Seguimiento Transparente en un Mundo Complejo",
+      "text1": "Fundado en 2024, ShipTrack nació de una simple frustración: rastrear paquetes a través de múltiples países y transportistas era fragmentado, lento y a menudo inexacto.",
+      "text2": "Nuestro equipo de expertos en logística e ingenieros construyó una plataforma que armoniza los datos de seguimiento de más de 1,200 transportistas en un solo panel limpio y en tiempo real."
+    },
+    "values": {
+      "title": "Nuestros Valores Fundamentales",
+      "subtitle": "Los principios que impulsan nuestra innovación.",
+      "trust": {
+        "title": "Confianza Sobre Todo",
+        "text": "Proporcionamos eventos de seguimiento verificados directamente desde la fuente, asegurando que siempre tenga la verdad."
+      },
+      "speed": {
+        "title": "La Velocidad es una Característica",
+        "text": "Nuestra API e interfaz están optimizadas para resultados instantáneos."
+      },
+      "precision": {
+        "title": "Precisión en el Detalle",
+        "text": "Desde el seguimiento a nivel de ciudad hasta la estimación de hora local, nos preocupamos por los pequeños detalles."
+      }
+    },
+    "stats": {
+      "couriers": "Transportistas Soportados",
+      "shipments": "Envíos Rastreados",
+      "countries": "Países Atendidos"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Ponte en Contacto",
+      "title": "Estamos Aquí para",
+      "titleSpan": "Ayudarte",
+      "description": "¿Tiene preguntas sobre un envío? ¿Necesita soporte de integración empresarial? Nuestro equipo está disponible 24/7 para ayudar con sus necesidades logísticas."
+    },
+    "cards": {
+      "support": "Soporte 24/7",
+      "supportDesc": "Asistencia las 24 horas para todas sus necesidades de seguimiento",
+      "response": "Respuesta Rápida",
+      "responseDesc": "Tiempo de respuesta promedio menor a 2 horas",
+      "global": "Cobertura Global",
+      "globalDesc": "Soporte para más de 1,200 transportistas en todo el mundo",
+      "expert": "Equipo Experto",
+      "expertDesc": "Profesionales de logística listos para ayudar"
+    },
+    "form": {
+      "title": "Ponte en Contacto",
+      "description": "Ya sea que tenga una pregunta sobre seguimiento, necesite soporte técnico o quiera discutir soluciones empresariales, estamos listos para ayudar.",
+      "email": "Envíanos un Email",
+      "emailResponse": "Respuesta en menos de 2 horas",
+      "call": "Llamar a Soporte",
+      "hours": "Lun-Vie: 9AM - 6PM EST",
+      "address": "Sede Global",
+      "businessHours": "Horario de Atención",
+      "monday": "Lunes - Viernes",
+      "saturday": "Sábado",
+      "sunday": "Domingo",
+      "closed": "Cerrado",
+      "name": "Nombre Completo",
+      "nameRequired": "El nombre es obligatorio",
+      "emailRequired": "El correo electrónico es obligatorio",
+      "emailInvalid": "El correo electrónico no es válido",
+      "messageRequired": "El mensaje es obligatorio",
+      "namePlaceholder": "Juan Pérez",
+      "emailLabel": "Correo Electrónico",
+      "emailPlaceholder": "juan@ejemplo.com",
+      "subject": "Asunto",
+      "trackingOptional": "Número de Seguimiento (Opcional)",
+      "trackingPlaceholder": "Ingrese número de seguimiento",
+      "message": "Mensaje",
+      "messagePlaceholder": "¿Cómo podemos ayudarle hoy? Por favor, proporcione tantos detalles como sea posible...",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje Enviado con Éxito!",
+      "successDesc": "Gracias por comunicarse con nosotros.",
+      "successDesc2": "Nuestro equipo de soporte le responderá en menos de 2 horas.",
+      "privacy": "Al enviar este formulario, acepta nuestra política de privacidad. Nunca compartiremos su información.",
+      "error": "Error al enviar el mensaje. Por favor, intente nuevamente más tarde o contáctenos directamente en support@shiptrack.io"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "description": "Encuentre respuestas rápidas a preguntas comunes sobre seguimiento y soporte.",
+      "viewAll": "Ver todas las FAQs"
+    }
+  },
+  "footer": {
+    "description": "Potenciando la logística global con seguimiento preciso e información en tiempo real de envíos. Rastree sus paquetes en cualquier lugar, en cualquier momento.",
+    "quickLinks": "Enlaces Rápidos",
+    "legal": "Legal",
+    "contact": "Contacto",
+    "terms": "Términos de Servicio",
+    "cookie": "Política de Cookies",
+    "globalCoverage": "Cobertura Global",
+    "rights": "Todos los derechos reservados. Software Logístico Profesional."
+  },
+  "blog": {
+    "seo": {
+      "title": "Guías de Envío y Seguimiento",
+      "description": "Guías expertas sobre envíos internacionales y seguimiento"
+    },
+    "badge": "Perspectivas Logísticas",
+    "title": "Guías de",
+    "titleSpan": "Envío",
+    "description": "Manténgase actualizado con las últimas tendencias en envíos globales, actualizaciones de transportistas y consejos profesionales de seguimiento.",
+    "searchPlaceholder": "Buscar artículos...",
+    "noResults": "No se encontraron artículos que coincidan con su búsqueda.",
+    "clearFilters": "Limpiar filtros",
+    "readMore": "Leer Artículo Completo",
+    "backToBlog": "Volver al Blog",
+    "notFound": "¡Ups! El artículo que buscas no existe.",
+    "checkOut": "Mira este artículo:",
+    "aboutAuthor": "Equipo de Logística ShipTrack",
+    "authorDesc": "Perspectivas expertas sobre envíos globales y tecnología de seguimiento.",
+    "shareArticle": "Compartir Artículo",
+    "articleId": "ID del Artículo:",
+    "relatedArticles": "Artículos Relacionados",
+    "newsletter": "Consejos Logísticos Semanales",
+    "newsletterDesc": "Reciba los últimos consejos de envío y seguimiento en su bandeja de entrada.",
+    "emailPlaceholder": "Ingrese su correo electrónico",
+    "subscribe": "Suscribirse Ahora",
+    "thanksSubscribe": "¡Gracias por suscribirte!",
+    "categories": "Categorías",
+    "allCategories": "Todas las Categorías"
+  },
+  "privacy": {
+    "seo": {
+      "title": "Política de Privacidad | ShipTrack",
+      "description": "Lea nuestra política de privacidad para entender cómo ShipTrack protege sus datos"
+    },
+    "badge": "Cumplimiento",
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización:",
+    "intro": "Su privacidad es fundamental para nosotros. Construimos nuestra plataforma con los protocolos de seguridad más estrictos para proteger los datos de sus envíos.",
+    "section1": {
+      "title": "1. Información que Recopilamos",
+      "text": "Cuando utiliza ShipTrack, recopilamos los datos mínimos necesarios para proporcionar nuestros servicios de seguimiento. Esto incluye:",
+      "item1": "Números de seguimiento proporcionados por usted.",
+      "item2": "Datos de seguimiento públicos proporcionados por transportistas.",
+      "item3": "Dirección IP y metadatos del navegador para seguridad y análisis.",
+      "item4": "Información de contacto de solicitudes de soporte."
+    },
+    "section2": {
+      "title": "2. Cómo Usamos los Datos",
+      "text": "Utilizamos la información recopilada únicamente para:",
+      "item1": "Agregar el estado de seguimiento en más de 1,200 transportistas.",
+      "item2": "Mejorar nuestros algoritmos de detección automática de transportistas.",
+      "item3": "Mantener la seguridad de la plataforma y prevenir el uso fraudulento.",
+      "item4": "Responder a sus consultas de atención al cliente."
+    },
+    "section3": {
+      "title": "3. Compartición de Datos",
+      "text": "ShipTrack no vende sus datos personales. Solo compartimos datos con transportistas externos (para obtener el estado de seguimiento) o entidades legales cuando lo exige la ley."
+    },
+    "section4": {
+      "title": "4. Seguridad",
+      "text": "Implementamos cifrado de nivel industrial para datos en reposo y en tránsito. Su historial de seguimiento se almacena de forma segura utilizando prácticas de seguridad nativas de la nube."
+    },
+    "section5": {
+      "title": "5. Contáctenos",
+      "text": "Para cualquier pregunta relacionada con la privacidad, comuníquese con nuestro Oficial de Protección de Datos en"
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Todo lo que necesita saber sobre nuestro servicio de seguimiento.",
+    "q1": "¿Cómo rastreo mi envío?",
+    "a1": "Simplemente ingrese su número de seguimiento único en la barra de búsqueda de nuestra página de inicio. Detectaremos automáticamente el transportista y mostraremos el estado actual y la ubicación de su paquete.",
+    "q2": "¿Qué transportistas soportan?",
+    "a2": "Soportamos más de 1,200 transportistas globales, incluyendo FedEx, UPS, DHL, USPS, Royal Mail, China Post y muchos servicios de entrega locales. Nuestro sistema está diseñado para compatibilidad universal.",
+    "q3": "¿Qué debo hacer si mi número de seguimiento no funciona?",
+    "a3": "Primero, verifique que el número de seguimiento esté ingresado correctamente sin espacios. Si es un envío nuevo, espere 24-48 horas ya que algunos transportistas retrasan las actualizaciones de estado. Si el problema persiste, comuníquese con el remitente o con el transportista directamente.",
+    "q4": "¿ShipTrack es gratis?",
+    "a4": "¡Sí! ShipTrack es una plataforma gratuita para que usuarios individuales rastreen sus envíos a nivel mundial. También ofrecemos soluciones empresariales para negocios de comercio electrónico que necesitan integración avanzada."
+  }
+}

@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';  // ← ADD THIS
 import logo from '../assets/images/logo.png';
+import LanguageSwitcher from './LanguageSwitcher';  // ← ADD THIS
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();  // ← ADD THIS
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Track', path: '/track' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Privacy', path: '/privacy' },
+    { name: t('nav.home'), path: '/' },
+    { name: t('nav.track'), path: '/track' },
+    { name: t('nav.about'), path: '/about' },
+    { name: t('nav.contact'), path: '/contact' },
+    { name: t('nav.blog'), path: '/blog' },
+    { name: t('nav.privacy'), path: '/privacy' },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -31,8 +34,8 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop Menu - Centered */}
-          <div className="hidden md:flex space-x-8">
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -46,13 +49,12 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
+            <LanguageSwitcher />  {/* ← ADD THIS */}
           </div>
 
-          {/* Empty div to maintain spacing - Sign In button REMOVED */}
-          <div className="hidden md:block w-0"></div>
-
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <LanguageSwitcher />  {/* ← ADD THIS */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-slate-600 hover:text-primary-blue p-2"

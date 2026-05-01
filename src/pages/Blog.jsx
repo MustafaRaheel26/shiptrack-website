@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import { blogPosts } from '../data/blogData';
+import { useTranslation } from 'react-i18next';
+import { getAllPosts, getAllCategories } from '../data/blogData';
 import BlogCard from '../components/BlogCard';
 import SEO from '../components/SEO';
 
 export default function Blog() {
+  const { t, i18n } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', ...new Set(blogPosts.map(post => post.category))];
+  const blogPosts = getAllPosts(i18n.language);
+  const categories = getAllCategories(i18n.language);
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -19,27 +22,24 @@ export default function Blog() {
   return (
     <div className="bg-slate-50 min-h-screen py-24">
       <SEO 
-        title="Shipping & Tracking Guides | Logistics Insights"
-        description="Expert guides on international shipping, carrier tracking tips, and logistics best practices. Stay updated with the latest trends in global package delivery."
-        keywords="shipping guides, tracking tips, logistics blog, package delivery, carrier updates"
+        title={t('blog.seo.title')}
+        description={t('blog.seo.description')}
         url="/blog"
       />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block py-1 px-3 rounded bg-primary-blue text-white text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-            Logistics Insights
+            {t('blog.badge')}
           </span>
           <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter leading-none mb-6">
-            Shipping & <span className="text-secondary-blue">Tracking</span> Guides
+            {t('blog.title')} <span className="text-secondary-blue">{t('blog.titleSpan')}</span>
           </h1>
           <p className="text-slate-500 font-medium text-lg leading-relaxed">
-            Stay updated with the latest trends in global shipping, carrier updates, and professional tracking tips from our logistics experts.
+            {t('blog.description')}
           </p>
         </div>
 
-        {/* Search and Filter Bar */}
         <div className="mb-12 flex flex-col md:flex-row gap-4 justify-between items-center">
           <div className="flex flex-wrap gap-2 justify-center">
             {categories.map((category) => (
@@ -52,7 +52,7 @@ export default function Blog() {
                     : 'bg-white text-slate-500 hover:bg-slate-100'
                 }`}
               >
-                {category}
+                {category === 'All' ? t('blog.allCategories') : category}
               </button>
             ))}
           </div>
@@ -60,7 +60,7 @@ export default function Blog() {
           <div className="relative">
             <input
               type="text"
-              placeholder="Search articles..."
+              placeholder={t('blog.searchPlaceholder')}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full md:w-64 px-4 py-2 rounded-full border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary-blue"
@@ -71,15 +71,14 @@ export default function Blog() {
           </div>
         </div>
 
-        {/* Blog Grid */}
         {filteredPosts.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-slate-500 text-lg">No articles found matching your search.</p>
+            <p className="text-slate-500 text-lg">{t('blog.noResults')}</p>
             <button 
               onClick={() => { setSearchTerm(''); setSelectedCategory('All'); }}
               className="mt-4 text-primary-blue font-bold hover:underline"
             >
-              Clear filters
+              {t('blog.clearFilters')}
             </button>
           </div>
         ) : (

@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Globe, Twitter, Facebook, Linkedin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import logo from '../assets/images/logo.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useTranslation();
 
   return (
     <footer className="bg-slate-900 text-slate-400 py-12">
@@ -19,7 +21,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm leading-relaxed mb-6">
-              Empowering global logistics with precise tracking and real-time shipment insights. Track your packages anywhere, anytime.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <Twitter className="w-5 h-5 cursor-pointer hover:text-white transition-colors" />
@@ -29,27 +31,27 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link to="/track" className="hover:text-white transition-colors">Track Shipment</Link></li>
-              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Contact Support</Link></li>
-              <li><Link to="/blog" className="hover:text-white transition-colors">Logistics Blog</Link></li>
+              <li><Link to="/" className="hover:text-white transition-colors">{t('nav.home')}</Link></li>
+              <li><Link to="/track" className="hover:text-white transition-colors">{t('nav.track')}</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">{t('nav.about')}</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">{t('nav.contact')}</Link></li>
+              <li><Link to="/blog" className="hover:text-white transition-colors">{t('nav.blog')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">Legal</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.legal')}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="hover:text-white transition-colors text-slate-500 pointer-events-none">Terms of Service</Link></li>
-              <li><Link to="/cookies" className="hover:text-white transition-colors text-slate-500 pointer-events-none">Cookie Policy</Link></li>
+              <li><Link to="/privacy" className="hover:text-white transition-colors">{t('nav.privacy')}</Link></li>
+              <li><Link to="/terms" className="hover:text-white transition-colors text-slate-500 pointer-events-none">{t('footer.terms')}</Link></li>
+              <li><Link to="/cookies" className="hover:text-white transition-colors text-slate-500 pointer-events-none">{t('footer.cookie')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">Contact</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.contact')}</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
@@ -57,18 +59,18 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 (800) LOGISTICS</span>
+                <span>+1 (800) 744-7482</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Globe className="w-4 h-4" />
-                <span>Global Coverage</span>
+                <span>{t('footer.globalCoverage')}</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-xs">
-          <p>&copy; {currentYear} ShipTrack. All rights reserved. Professional Logistics Software.</p>
+          <p>&copy; {currentYear} ShipTrack. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

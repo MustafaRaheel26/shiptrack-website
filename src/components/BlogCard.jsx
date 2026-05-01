@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, Tag } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function BlogCard({ post }) {
+  const { t } = useTranslation();
+
   return (
     <div className="group cursor-pointer bg-white rounded-3xl border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
       <Link to={`/blog/${post.slug || post.id}`}>
@@ -50,7 +53,7 @@ export default function BlogCard({ post }) {
           to={`/blog/${post.slug || post.id}`} 
           className="inline-flex items-center gap-2 text-primary-blue font-black text-xs uppercase tracking-widest group/btn"
         >
-          Read Full Article 
+          {t('blog.readMore')}
           <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
         </Link>
       </div>

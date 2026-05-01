@@ -1,0 +1,282 @@
+{
+  "nav": {
+    "home": "Home",
+    "track": "Track",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog",
+    "privacy": "Privacy"
+  },
+  "home": {
+    "hero": {
+      "badge": "Global Logistics Intelligence",
+      "title": "Track Your",
+      "titleSpan": "Shipment",
+      "titleEnd": "Anywhere",
+      "description": "Enter your tracking number to get real-time updates from 1,200+ carriers worldwide with absolute precision.",
+      "placeholder": "Enter tracking number (e.g., ST123456789)",
+      "button": "Track Now",
+      "features": "Auto-detection Carrier | 1,200+ Couriers"
+    },
+    "trust": {
+      "title": "Supported Global Carriers"
+    },
+    "process": {
+      "badge": "The Process",
+      "title": "How ShipTrack Simplifies Your Logistics",
+      "step1": {
+        "number": "01",
+        "title": "Enter Tracking Number",
+        "text": "Paste your carrier-provided tracking ID into our secure search platform."
+      },
+      "step2": {
+        "number": "02",
+        "title": "Auto-Detection",
+        "text": "We automatically identify the correct courier from our database of 1,200+ partners."
+      },
+      "step3": {
+        "number": "03",
+        "title": "Real-Time Tracking",
+        "text": "View a detailed timeline of your package's journey across the world."
+      },
+      "stats": "99.9% Detection Rate"
+    },
+    "features": {
+      "global": {
+        "title": "Global Coverage",
+        "description": "Support for 1,200+ global couriers across 220 countries and territories."
+      },
+      "instant": {
+        "title": "Instant Updates",
+        "description": "Real-time tracking notifications and status changes delivered instantly."
+      },
+      "security": {
+        "title": "Data Protection",
+        "description": "Secure tracking that respects your privacy and ensures shipment safety."
+      },
+      "analytics": {
+        "title": "Advanced Analytics",
+        "description": "Detailed insights into delivery performance and estimated arrival times."
+      }
+    },
+    "blog": {
+      "badge": "Latest Tracking Tips",
+      "title": "Shipping Guides & Articles",
+      "viewAll": "View All"
+    },
+    "cta": {
+      "title": "Ready to track your package?",
+      "description": "No registration required. Join millions of users who rely on ShipTrack for their daily logistics monitoring."
+    }
+  },
+  "tracking": {
+    "title": "Track Your Package",
+    "description": "Enter your tracking number below to see real-time updates and carrier detection.",
+    "back": "Back",
+    "universal": "Universal Tracking",
+    "connecting": "Connecting to Carrier Servers...",
+    "notFound": "Oops! Shipment Not Found",
+    "notFoundMessage": "Tracking information not available for this number. Please verify and try again.",
+    "tryAgain": "Try Again",
+    "downloadApp": "Download ShipTrack App",
+    "downloadAppDesc": "Our mobile app provides push notifications for every status change. Never miss a delivery again."
+  },
+  "trackingCard": {
+    "trackingNumber": "Tracking Number",
+    "carrier": "Carrier Detection",
+    "currentStatus": "Current Status",
+    "origin": "Origin",
+    "destination": "Destination",
+    "estimatedDelivery": "Est. Delivery",
+    "delivered": "DELIVERED",
+    "inTransit": "IN TRANSIT",
+    "outForDelivery": "OUT FOR DELIVERY",
+    "exception": "EXCEPTION",
+    "pending": "PENDING"
+  },
+  "timeline": {
+    "title": "Tracking Activity",
+    "updates": "Updates",
+    "noEvents": "No tracking events available yet. Please check back later."
+  },
+  "about": {
+    "mission": {
+      "badge": "Our Mission",
+      "title": "Simplifying Global",
+      "titleSpan": "Logistics",
+      "titleEnd": "for Everyone."
+    },
+    "story": {
+      "title": "Transparent Tracking in a Complex World",
+      "text1": "Founded in 2024, ShipTrack was born out of a simple frustration: tracking packages across multiple countries and carriers was fragmented, slow, and often inaccurate.",
+      "text2": "Our team of logistics experts and engineers built a platform that harmonizes tracking data from 1,200+ carriers into a single, clean, and real-time dashboard."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "subtitle": "The principles that drive our innovation.",
+      "trust": {
+        "title": "Trust Over Everything",
+        "text": "We provide verified tracking events directly from the source, ensuring you always have the truth."
+      },
+      "speed": {
+        "title": "Speed is a Feature",
+        "text": "Our API and UI are optimized for instant results. No waiting, no loading spinners, just data."
+      },
+      "precision": {
+        "title": "Precision in Detail",
+        "text": "From city-level location tracking to local time estimation, we sweat the small stuff."
+      }
+    },
+    "stats": {
+      "couriers": "Couriers Supported",
+      "shipments": "Shipments Tracked",
+      "countries": "Countries Served"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Get in Touch",
+      "title": "We're Here to",
+      "titleSpan": "Help",
+      "description": "Have questions about a shipment? Need enterprise integration support? Our team is available 24/7 to assist with your logistics needs."
+    },
+    "cards": {
+      "support": "24/7 Support",
+      "supportDesc": "Round-the-clock assistance for all your tracking needs",
+      "response": "Fast Response",
+      "responseDesc": "Average response time under 2 hours",
+      "global": "Global Coverage",
+      "globalDesc": "Support for 1,200+ carriers worldwide",
+      "expert": "Expert Team",
+      "expertDesc": "Logistics professionals ready to help"
+    },
+    "form": {
+      "title": "Get in Touch",
+      "description": "Whether you have a question about tracking, need technical support, or want to discuss enterprise solutions — we're ready to help.",
+      "email": "Email Us",
+      "emailResponse": "Response within 2 hours",
+      "call": "Call Support",
+      "hours": "Mon-Fri: 9AM - 6PM EST",
+      "address": "Global Headquarters",
+      "businessHours": "Business Hours",
+      "monday": "Monday - Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "closed": "Closed",
+      "name": "Full Name",
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Email is invalid",
+      "messageRequired": "Message is required",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "subject": "Subject",
+      "trackingOptional": "Tracking Number (Optional)",
+      "trackingPlaceholder": "Enter tracking number",
+      "message": "Message",
+      "messagePlaceholder": "How can we help you today? Please provide as much detail as possible...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message Sent Successfully!",
+      "successDesc": "Thank you for reaching out to us.",
+      "successDesc2": "Our support team will get back to you within 2 hours.",
+      "privacy": "By submitting this form, you agree to our privacy policy. We'll never share your information.",
+      "error": "Failed to send message. Please try again later or contact us directly at support@shiptrack.io"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Find quick answers to common questions about tracking and support.",
+      "viewAll": "View All FAQs"
+    }
+  },
+  "footer": {
+    "description": "Empowering global logistics with precise tracking and real-time shipment insights. Track your packages anywhere, anytime.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "contact": "Contact",
+    "terms": "Terms of Service",
+    "cookie": "Cookie Policy",
+    "globalCoverage": "Global Coverage",
+    "rights": "All rights reserved. Professional Logistics Software."
+  },
+  "blog": {
+    "seo": {
+      "title": "Shipping & Tracking Guides",
+      "description": "Expert guides on international shipping and tracking"
+    },
+    "badge": "Logistics Insights",
+    "title": "Shipping &",
+    "titleSpan": "Tracking",
+    "description": "Stay updated with the latest trends in global shipping, carrier updates, and professional tracking tips from our logistics experts.",
+    "searchPlaceholder": "Search articles...",
+    "noResults": "No articles found matching your search.",
+    "clearFilters": "Clear filters",
+    "readMore": "Read Full Article",
+    "backToBlog": "Back to Blog",
+    "notFound": "Oops! The article you're looking for doesn't exist.",
+    "checkOut": "Check out this article:",
+    "aboutAuthor": "ShipTrack Logistics Team",
+    "authorDesc": "Expert insights on global shipping and package tracking technology.",
+    "shareArticle": "Share Article",
+    "articleId": "Article ID:",
+    "relatedArticles": "Related Articles",
+    "newsletter": "Weekly Logistics Tips",
+    "newsletterDesc": "Get the latest shipping insights and tracking tips delivered to your inbox.",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe Now",
+    "thanksSubscribe": "Thanks for subscribing!",
+    "categories": "Categories",
+    "allCategories": "All Categories"
+  },
+  "privacy": {
+    "seo": {
+      "title": "Privacy Policy | ShipTrack",
+      "description": "Read our privacy policy to understand how ShipTrack protects your data"
+    },
+    "badge": "Compliance",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated:",
+    "intro": "Your privacy is critical to us. We build our platform with the strictest security protocols to protect your shipment data.",
+    "section1": {
+      "title": "1. Information We Collect",
+      "text": "When you use ShipTrack, we collect minimum necessary data to provide our tracking services. This includes:",
+      "item1": "Tracking numbers provided by you.",
+      "item2": "Public tracking data provided by couriers.",
+      "item3": "IP address and browser metadata for security and analytics.",
+      "item4": "Contact information from support requests."
+    },
+    "section2": {
+      "title": "2. How We Use Data",
+      "text": "We use the collected information solely to:",
+      "item1": "Aggregate tracking status across 1,200+ carriers.",
+      "item2": "Improve our carrier auto-detection algorithms.",
+      "item3": "Maintain platform security and prevent fraudulent misuse.",
+      "item4": "Respond to your customer support inquiries."
+    },
+    "section3": {
+      "title": "3. Data Sharing",
+      "text": "ShipTrack does not sell your personal data. We only share data with third-party carriers (to fetch tracking status) or legal entities when required by law."
+    },
+    "section4": {
+      "title": "4. Security",
+      "text": "We implement industry-standard encryption for data at rest and in transit. Your tracking history is stored securely using cloud-native security practices."
+    },
+    "section5": {
+      "title": "5. Contact Us",
+      "text": "For any privacy-related questions, please contact our Data Protection Officer at"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our tracking service.",
+    "q1": "How do I track my shipment?",
+    "a1": "Simply enter your unique tracking number in the search bar on our homepage. We'll automatically detect the carrier and display the current status and location of your package.",
+    "q2": "Which couriers do you support?",
+    "a2": "We support over 1,200 global carriers, including FedEx, UPS, DHL, USPS, Royal Mail, China Post, and many local delivery services. Our system is designed for universal compatibility.",
+    "q3": "What should I do if my tracking number isn't working?",
+    "a3": "First, verify that the tracking number is entered correctly without spaces. If it's a new shipment, please wait 24-48 hours as some carriers delay status updates. If the problem persists, contact the sender or the carrier directly.",
+    "q4": "Is ShipTrack free to use?",
+    "a4": "Yes! ShipTrack is a free platform for individual users to track their shipments globally. We also offer enterprise solutions for e-commerce businesses needing advanced integration."
+  }
+}

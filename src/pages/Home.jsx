@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Shield, Zap, Globe, BarChart3, Package, CheckCircle, ArrowRight } from 'lucide-react';
+import { Shield, Zap, Globe, BarChart3, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { blogPosts } from '../data/blogData';
 import BlogCard from '../components/BlogCard';
 import TrackingForm from '../components/TrackingForm';
@@ -9,26 +10,28 @@ import FAQ from '../components/FAQ';
 import SEO from '../components/SEO';
 
 export default function Home() {
+  const { t } = useTranslation();
+
   const features = [
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Global Coverage",
-      description: "Support for 1,200+ global couriers across 220 countries and territories."
+      title: t('home.features.global.title'),
+      description: t('home.features.global.description')
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Instant Updates",
-      description: "Real-time tracking notifications and status changes delivered instantly."
+      title: t('home.features.instant.title'),
+      description: t('home.features.instant.description')
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Data Protection",
-      description: "Secure tracking that respects your privacy and ensures shipment safety."
+      title: t('home.features.security.title'),
+      description: t('home.features.security.description')
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Detailed insights into delivery performance and estimated arrival times."
+      title: t('home.features.analytics.title'),
+      description: t('home.features.analytics.description')
     }
   ];
 
@@ -50,7 +53,7 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 className="inline-block py-1 px-3 rounded bg-primary-blue text-white text-[10px] font-black uppercase tracking-[0.2em] mb-8"
               >
-                Global Logistics Intelligence
+                {t('home.hero.badge')}
               </motion.span>
               <motion.h1 
                 initial={{ opacity: 0, y: 30 }}
@@ -58,7 +61,7 @@ export default function Home() {
                 transition={{ delay: 0.1 }}
                 className="text-6xl md:text-8xl font-black text-slate-900 tracking-tighter leading-[0.9] mb-8"
               >
-                Track Your <br /><span className="text-secondary-blue">Shipment</span> <br />Anywhere
+                {t('home.hero.title')} <br /><span className="text-secondary-blue">{t('home.hero.titleSpan')}</span> <br />{t('home.hero.titleEnd')}
               </motion.h1>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -66,7 +69,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
                 className="text-lg md:text-xl text-slate-500 max-w-lg leading-relaxed mb-10 font-medium"
               >
-                Enter your tracking number to get real-time updates from 1,200+ carriers worldwide with absolute precision.
+                {t('home.hero.description')}
               </motion.p>
 
               <motion.div
@@ -83,15 +86,14 @@ export default function Home() {
                 <div className="relative">
                     <div className="absolute -inset-4 bg-primary-blue/5 blur-3xl rounded-full" />
                     <div className="relative bg-white p-8 rounded-[3rem] shadow-2xl border border-slate-100">
-                        {/* Mock Tracking Result Mini View */}
                         <div className="bg-primary-blue rounded-2xl p-6 text-white mb-6">
-                            <p className="text-[10px] font-black uppercase tracking-widest opacity-60 mb-1">Live Tracking</p>
+                            <p className="text-[10px] font-black uppercase tracking-widest opacity-60 mb-1">{t('trackingCard.trackingNumber')}</p>
                             <p className="text-xl font-black">ST-482930200</p>
                         </div>
                         <div className="space-y-4">
                             <div className="flex justify-between items-center text-xs font-black uppercase tracking-widest text-slate-400">
                                 <span>Status</span>
-                                <span className="text-success">In Transit</span>
+                                <span className="text-success">{t('trackingCard.inTransit')}</span>
                             </div>
                             <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
                                 <div className="h-full bg-primary-blue w-2/3" />
@@ -111,8 +113,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* Floating background elements */}
         <div className="absolute top-1/2 left-1/4 w-72 h-72 bg-blue-400/10 blur-[100px] rounded-full -z-10" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-400/10 blur-[120px] rounded-full -z-10" />
       </section>
@@ -120,9 +120,8 @@ export default function Home() {
       {/* Trust Marks */}
       <section className="py-12 border-y border-slate-100 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-8">Supported Global Carriers</p>
+          <p className="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-8">{t('home.trust.title')}</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale">
-            {/* Carrier Logos Placeholders */}
             <div className="font-black text-2xl text-slate-900">FEDEX</div>
             <div className="font-black text-2xl text-slate-900">UPS</div>
             <div className="font-black text-2xl text-slate-900">DHL</div>
@@ -137,23 +136,31 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
-              <span className="text-primary-blue font-black uppercase text-xs tracking-widest block mb-4">The Process</span>
-              <h2 className="text-4xl font-black text-slate-900 leading-tight mb-8">How ShipTrack Simplifies Your Logistics</h2>
+              <span className="text-primary-blue font-black uppercase text-xs tracking-widest block mb-4">{t('home.process.badge')}</span>
+              <h2 className="text-4xl font-black text-slate-900 leading-tight mb-8">{t('home.process.title')}</h2>
               
               <div className="space-y-8">
-                {[
-                  { step: "01", title: "Enter Tracking Number", text: "Paste your carrier-provided tracking ID into our secure search platform." },
-                  { step: "02", title: "Auto-Detection", text: "We automatically identify the correct courier from our database of 1,200+ partners." },
-                  { step: "03", title: "Real-Time Tracking", text: "View a detailed timeline of your package's journey across the world." }
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-6">
-                    <div className="text-4xl font-black text-slate-100">{item.step}</div>
-                    <div>
-                      <h4 className="font-bold text-slate-900 mb-2">{item.title}</h4>
-                      <p className="text-slate-500 text-sm leading-relaxed">{item.text}</p>
-                    </div>
+                <div className="flex gap-6">
+                  <div className="text-4xl font-black text-slate-100">01</div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 mb-2">{t('home.process.step1.title')}</h4>
+                    <p className="text-slate-500 text-sm leading-relaxed">{t('home.process.step1.text')}</p>
                   </div>
-                ))}
+                </div>
+                <div className="flex gap-6">
+                  <div className="text-4xl font-black text-slate-100">02</div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 mb-2">{t('home.process.step2.title')}</h4>
+                    <p className="text-slate-500 text-sm leading-relaxed">{t('home.process.step2.text')}</p>
+                  </div>
+                </div>
+                <div className="flex gap-6">
+                  <div className="text-4xl font-black text-slate-100">03</div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 mb-2">{t('home.process.step3.title')}</h4>
+                    <p className="text-slate-500 text-sm leading-relaxed">{t('home.process.step3.text')}</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -166,7 +173,7 @@ export default function Home() {
               />
               <div className="absolute -bottom-6 -right-6 bg-primary-blue text-white p-8 rounded-3xl z-20 shadow-xl hidden md:block">
                 <p className="text-4xl font-black mb-1">99.9%</p>
-                <p className="text-xs font-bold uppercase tracking-wider opacity-75">Detection Rate</p>
+                <p className="text-xs font-bold uppercase tracking-wider opacity-75">{t('home.process.stats')}</p>
               </div>
             </div>
           </div>
@@ -194,11 +201,11 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 mb-16 flex justify-between items-end">
             <div>
-                <span className="text-primary-blue font-black uppercase text-[10px] tracking-[0.2em] block mb-4">Latest Tracking Tips</span>
-                <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter">Shipping Guides & Articles</h2>
+                <span className="text-primary-blue font-black uppercase text-[10px] tracking-[0.2em] block mb-4">{t('home.blog.badge')}</span>
+                <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter">{t('home.blog.title')}</h2>
             </div>
             <Link to="/blog" className="text-primary-blue font-black flex items-center gap-2 hover:gap-3 transition-all underline text-xs uppercase tracking-widest mb-2">
-                View All <ArrowRight className="w-4 h-4" />
+                {t('home.blog.viewAll')} <ArrowRight className="w-4 h-4" />
             </Link>
         </div>
 
@@ -216,13 +223,11 @@ export default function Home() {
       <section className="py-24">
         <div className="max-w-5xl mx-auto px-4">
           <div className="bg-slate-900 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
-            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-8 relative z-10">Ready to track your package?</h2>
-            <p className="text-slate-400 mb-10 max-w-xl mx-auto relative z-10">No registration required. Join millions of users who rely on ShipTrack for their daily logistics monitoring.</p>
+            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-8 relative z-10">{t('home.cta.title')}</h2>
+            <p className="text-slate-400 mb-10 max-w-xl mx-auto relative z-10">{t('home.cta.description')}</p>
             <div className="relative z-10">
                 <TrackingForm variant="small" />
             </div>
-            
-            {/* Circles for design */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary-blue/20 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2" />
           </div>
         </div>
