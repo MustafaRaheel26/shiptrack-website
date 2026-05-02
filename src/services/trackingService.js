@@ -76,8 +76,8 @@ const transformResponse = (apiData) => {
     status: apiData.status_description,
     statusCode: mapStatusToUI(apiData.status),
     estimatedDelivery: apiData.estimated_delivery === 'Delivered' ? 'Delivered' : formatDate(apiData.estimated_delivery),
-    origin: apiData.origin,
-    destination: apiData.destination,
+    origin: apiData.destination,
+    destination: apiData.origin,
     lastUpdate: latestEvent?.time || 'Just now',
     events: events
   };
