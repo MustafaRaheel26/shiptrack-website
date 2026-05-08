@@ -1,0 +1,282 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "track": "Verfolgen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "privacy": "Datenschutz"
+  },
+  "home": {
+    "hero": {
+      "badge": "Globale Logistikintelligenz",
+      "title": "Verfolgen Sie Ihre",
+      "titleSpan": "Sendung",
+      "titleEnd": "Überall",
+      "description": "Geben Sie Ihre Sendungsnummer ein, um Echtzeit-Updates von über 1.200 Kurieren weltweit mit absoluter Präzision zu erhalten.",
+      "placeholder": "Geben Sie die Sendungsnummer ein (z.B. ST123456789)",
+      "button": "Jetzt Verfolgen",
+      "features": "Automatische Speditionserkennung | 1.200+ Kuriere"
+    },
+    "trust": {
+      "title": "Unterstützte Globale Kuriere"
+    },
+    "process": {
+      "badge": "Der Prozess",
+      "title": "Wie ShipTrack Ihre Logistik Vereinfacht",
+      "step1": {
+        "number": "01",
+        "title": "Sendungsnummer Eingeben",
+        "text": "Fügen Sie Ihre vom Kurier bereitgestellte Sendungs-ID in unsere sichere Suchplattform ein."
+      },
+      "step2": {
+        "number": "02",
+        "title": "Automatische Erkennung",
+        "text": "Wir identifizieren automatisch den richtigen Kurier aus unserer Datenbank mit über 1.200 Partnern."
+      },
+      "step3": {
+        "number": "03",
+        "title": "Echtzeit-Verfolgung",
+        "text": "Sehen Sie eine detaillierte Zeitleiste der Reise Ihres Pakets um die Welt."
+      },
+      "stats": "99.9% Erkennungsrate"
+    },
+    "features": {
+      "global": {
+        "title": "Weltweite Abdeckung",
+        "description": "Unterstützung für über 1.200 globale Kuriere in 220 Ländern und Territorien."
+      },
+      "instant": {
+        "title": "Sofortige Updates",
+        "description": "Echtzeit-Benachrichtigungen und Statusänderungen werden sofort geliefert."
+      },
+      "security": {
+        "title": "Datenschutz",
+        "description": "Sichere Sendungsverfolgung, die Ihre Privatsphäre respektiert und die Sicherheit Ihrer Sendung gewährleistet."
+      },
+      "analytics": {
+        "title": "Erweiterte Analysen",
+        "description": "Detaillierte Einblicke in die Lieferleistung und voraussichtliche Ankunftszeiten."
+      }
+    },
+    "blog": {
+      "badge": "Neueste Verfolgungstipps",
+      "title": "Versandratgeber und Artikel",
+      "viewAll": "Alle Anzeigen"
+    },
+    "cta": {
+      "title": "Bereit, Ihr Paket zu verfolgen?",
+      "description": "Keine Registrierung erforderlich. Schließen Sie sich Millionen von Nutzern an, die für ihre tägliche Logistiküberwachung auf ShipTrack vertrauen."
+    }
+  },
+  "tracking": {
+    "title": "Verfolgen Sie Ihr Paket",
+    "description": "Geben Sie unten Ihre Sendungsnummer ein, um Echtzeit-Updates und die Speditionserkennung zu sehen.",
+    "back": "Zurück",
+    "universal": "Universelle Verfolgung",
+    "connecting": "Verbinde mit Kurierservern...",
+    "notFound": "Ups! Sendung Nicht Gefunden",
+    "notFoundMessage": "Verfolgungsinformationen für diese Nummer nicht verfügbar. Bitte überprüfen Sie die Nummer und versuchen Sie es erneut.",
+    "tryAgain": "Erneut Versuchen",
+    "downloadApp": "ShipTrack App Herunterladen",
+    "downloadAppDesc": "Unsere mobile App bietet Push-Benachrichtigungen für jede Statusänderung. Verpassen Sie nie wieder eine Lieferung."
+  },
+  "trackingCard": {
+    "trackingNumber": "Sendungsnummer",
+    "carrier": "Speditionserkennung",
+    "currentStatus": "Aktueller Status",
+    "origin": "Herkunft",
+    "destination": "Ziel",
+    "estimatedDelivery": "Voraussichtliche Lieferung",
+    "delivered": "ZUGESTELLT",
+    "inTransit": "UNTERWEGS",
+    "outForDelivery": "IN ZUSTELLUNG",
+    "exception": "AUSNAHME",
+    "pending": "AUSSTEHEND"
+  },
+  "timeline": {
+    "title": "Verfolgungsaktivität",
+    "updates": "Aktualisierungen",
+    "noEvents": "Noch keine Verfolgungsereignisse verfügbar. Bitte schauen Sie später wieder vorbei."
+  },
+  "about": {
+    "mission": {
+      "badge": "Unsere Mission",
+      "title": "Globale Logistik",
+      "titleSpan": "Vereinfachen",
+      "titleEnd": "für Alle."
+    },
+    "story": {
+      "title": "Transparente Sendungsverfolgung in einer Komplexen Welt",
+      "text1": "ShipTrack wurde 2024 aus einer einfachen Frustration heraus gegründet: Die Sendungsverfolgung über mehrere Länder und Kuriere hinweg war fragmentiert, langsam und oft ungenau.",
+      "text2": "Unser Team aus Logistikexperten und Ingenieuren hat eine Plattform entwickelt, die Verfolgungsdaten von über 1.200 Kurieren in einem einzigen, übersichtlichen Echtzeit-Dashboard harmonisiert."
+    },
+    "values": {
+      "title": "Unsere Kernwerte",
+      "subtitle": "Die Prinzipien, die unsere Innovation antreiben.",
+      "trust": {
+        "title": "Vertrauen über Alles",
+        "text": "Wir liefern verifizierte Verfolgungsereignisse direkt von der Quelle, damit Sie immer die Wahrheit kennen."
+      },
+      "speed": {
+        "title": "Geschwindigkeit ist ein Feature",
+        "text": "Unsere API und Benutzeroberfläche sind für sofortige Ergebnisse optimiert."
+      },
+      "precision": {
+        "title": "Präzision im Detail",
+        "text": "Von der stadtgenauen Standortverfolgung bis zur lokalen Zeitschätzung – wir kümmern uns um die kleinen Details."
+      }
+    },
+    "stats": {
+      "couriers": "Unterstützte Kuriere",
+      "shipments": "Verfolgte Sendungen",
+      "countries": "Bediente Länder"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Kontaktieren Sie Uns",
+      "title": "Wir Sind Hier, Um Zu",
+      "titleSpan": "Helfen",
+      "description": "Haben Sie Fragen zu einer Sendung? Benötigen Sie Unterstützung bei der Unternehmensintegration? Unser Team ist 24/7 verfügbar, um Ihnen bei Ihren Logistikanforderungen zu helfen."
+    },
+    "cards": {
+      "support": "24/7 Support",
+      "supportDesc": "Rund-um-die-Uhr-Unterstützung für alle Ihre Tracking-Anforderungen",
+      "response": "Schnelle Antwort",
+      "responseDesc": "Durchschnittliche Antwortzeit unter 2 Stunden",
+      "global": "Weltweite Abdeckung",
+      "globalDesc": "Unterstützung für über 1.200 Kurierdienste weltweit",
+      "expert": "Expertenteam",
+      "expertDesc": "Logistikexperten, die bereit sind zu helfen"
+    },
+    "form": {
+      "title": "Kontaktieren Sie Uns",
+      "description": "Egal, ob Sie eine Frage zur Sendungsverfolgung haben, technischen Support benötigen oder über Unternehmenslösungen sprechen möchten – wir sind bereit zu helfen.",
+      "email": "E-Mail an Uns",
+      "emailResponse": "Antwort innerhalb von 2 Stunden",
+      "call": "Support Anrufen",
+      "hours": "Mo-Fr: 9 - 18 Uhr EST",
+      "address": "Hauptsitz",
+      "businessHours": "Geschäftszeiten",
+      "monday": "Montag - Freitag",
+      "saturday": "Samstag",
+      "sunday": "Sonntag",
+      "closed": "Geschlossen",
+      "name": "Vollständiger Name",
+      "nameRequired": "Name ist erforderlich",
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "E-Mail ist ungültig",
+      "messageRequired": "Nachricht ist erforderlich",
+      "namePlaceholder": "Max Mustermann",
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "max@beispiel.de",
+      "subject": "Betreff",
+      "trackingOptional": "Sendungsnummer (Optional)",
+      "trackingPlaceholder": "Sendungsnummer eingeben",
+      "message": "Nachricht",
+      "messagePlaceholder": "Wie können wir Ihnen heute helfen? Bitte geben Sie so viele Details wie möglich an...",
+      "send": "Nachricht Senden",
+      "sending": "Senden...",
+      "success": "Nachricht Erfolgreich Gesendet!",
+      "successDesc": "Vielen Dank, dass Sie uns kontaktiert haben.",
+      "successDesc2": "Unser Support-Team wird sich innerhalb von 2 Stunden bei Ihnen melden.",
+      "privacy": "Mit dem Absenden dieses Formulars stimmen Sie unserer Datenschutzrichtlinie zu. Wir geben Ihre Daten niemals weiter.",
+      "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt unter support@shiptrack.io"
+    },
+    "faq": {
+      "title": "Häufig Gestellte Fragen",
+      "description": "Finden Sie schnelle Antworten auf häufige Fragen zur Sendungsverfolgung und zum Support.",
+      "viewAll": "Alle FAQs Anzeigen"
+    }
+  },
+  "footer": {
+    "description": "Stärkung der globalen Logistik mit präziser Sendungsverfolgung und Echtzeit-Einblicken. Verfolgen Sie Ihre Pakete überall, jederzeit.",
+    "quickLinks": "Schnelllinks",
+    "legal": "Rechtliches",
+    "contact": "Kontakt",
+    "terms": "Nutzungsbedingungen",
+    "cookie": "Cookie-Richtlinie",
+    "globalCoverage": "Weltweite Abdeckung",
+    "rights": "Alle Rechte vorbehalten. Professionelle Logistik-Software."
+  },
+  "blog": {
+    "seo": {
+      "title": "Versand- und Verfolgungsratgeber",
+      "description": "Expertenratgeber für internationalen Versand und Sendungsverfolgung"
+    },
+    "badge": "Logistik-Einblicke",
+    "title": "Versand-",
+    "titleSpan": "Ratgeber",
+    "description": "Bleiben Sie auf dem Laufenden mit den neuesten Trends im globalen Versand, Kurier-Updates und professionellen Verfolgungstipps.",
+    "searchPlaceholder": "Artikel durchsuchen...",
+    "noResults": "Keine Artikel gefunden.",
+    "clearFilters": "Filter löschen",
+    "readMore": "Ganzen Artikel Lesen",
+    "backToBlog": "Zurück zum Blog",
+    "notFound": "Ups! Der gesuchte Artikel existiert nicht.",
+    "checkOut": "Schauen Sie sich diesen Artikel an:",
+    "aboutAuthor": "ShipTrack Logistik-Team",
+    "authorDesc": "Experteneinblicke in globalen Versand und Sendungsverfolgungstechnologie.",
+    "shareArticle": "Artikel Teilen",
+    "articleId": "Artikel-ID:",
+    "relatedArticles": "Ähnliche Artikel",
+    "newsletter": "Wöchentliche Logistik-Tipps",
+    "newsletterDesc": "Erhalten Sie die neuesten Versandinformationen und Verfolgungstipps in Ihrem Posteingang.",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+    "subscribe": "Jetzt Abonnieren",
+    "thanksSubscribe": "Danke für Ihr Abonnement!",
+    "categories": "Kategorien",
+    "allCategories": "Alle Kategorien"
+  },
+  "privacy": {
+    "seo": {
+      "title": "Datenschutzerklärung | ShipTrack",
+      "description": "Lesen Sie unsere Datenschutzerklärung, um zu verstehen, wie ShipTrack Ihre Daten schützt"
+    },
+    "badge": "Konformität",
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Letzte Aktualisierung:",
+    "intro": "Ihre Privatsphäre ist uns wichtig. Wir bauen unsere Plattform mit den strengsten Sicherheitsprotokollen auf, um die Daten Ihrer Sendungen zu schützen.",
+    "section1": {
+      "title": "1. Informationen, die Wir Sammeln",
+      "text": "Wenn Sie ShipTrack nutzen, erheben wir die minimal notwendigen Daten, um unsere Verfolgungsdienste bereitzustellen. Dazu gehören:",
+      "item1": "Von Ihnen bereitgestellte Sendungsnummern.",
+      "item2": "Öffentliche Verfolgungsdaten von Kurieren.",
+      "item3": "IP-Adresse und Browser-Metadaten für Sicherheit und Analyse.",
+      "item4": "Kontaktinformationen aus Supportanfragen."
+    },
+    "section2": {
+      "title": "2. Wie Wir Daten Verwenden",
+      "text": "Wir verwenden die gesammelten Informationen ausschließlich für:",
+      "item1": "Aggregation des Verfolgungsstatus über 1.200+ Kuriere.",
+      "item2": "Verbesserung unserer Algorithmen zur automatischen Speditionserkennung.",
+      "item3": "Aufrechterhaltung der Plattformsicherheit und Verhinderung von betrügerischer Nutzung.",
+      "item4": "Beantwortung Ihrer Kundenanfragen."
+    },
+    "section3": {
+      "title": "3. Datenweitergabe",
+      "text": "ShipTrack verkauft Ihre persönlichen Daten nicht. Wir geben Daten nur an Drittanbieter (zur Abfrage des Verfolgungsstatus) oder rechtliche Einrichtungen weiter, wenn dies gesetzlich vorgeschrieben ist."
+    },
+    "section4": {
+      "title": "4. Sicherheit",
+      "text": "Wir implementieren branchenübliche Verschlüsselung für ruhende und übertragene Daten. Ihr Verfolgungsverlauf wird sicher mit Cloud-Native-Sicherheitspraktiken gespeichert."
+    },
+    "section5": {
+      "title": "5. Kontaktieren Sie Uns",
+      "text": "Bei Fragen zum Datenschutz wenden Sie sich bitte an unseren Datenschutzbeauftragten unter"
+    }
+  },
+  "faq": {
+    "title": "Häufig Gestellte Fragen",
+    "subtitle": "Alles, was Sie über unseren Verfolgungsservice wissen müssen.",
+    "q1": "Wie verfolge ich meine Sendung?",
+    "a1": "Geben Sie einfach Ihre eindeutige Sendungsnummer in die Suchleiste auf unserer Startseite ein. Wir erkennen automatisch den Kurier und zeigen den aktuellen Status und Standort Ihres Pakets an.",
+    "q2": "Welche Kuriere unterstützen Sie?",
+    "a2": "Wir unterstützen über 1.200 globale Kuriere, darunter FedEx, UPS, DHL, USPS, Royal Mail, China Post und viele lokale Zustelldienste. Unser System ist auf universelle Kompatibilität ausgelegt.",
+    "q3": "Was soll ich tun, wenn meine Sendungsnummer nicht funktioniert?",
+    "a3": "Überprüfen Sie zunächst, ob die Sendungsnummer korrekt und ohne Leerzeichen eingegeben wurde. Bei einer neuen Sendung warten Sie bitte 24-48 Stunden, da einige Kuriere die Statusaktualisierungen verzögern. Wenn das Problem weiterhin besteht, wenden Sie sich direkt an den Absender oder den Kurier.",
+    "q4": "Ist ShipTrack kostenlos?",
+    "a4": "Ja! ShipTrack ist eine kostenlose Plattform für Privatpersonen, um ihre Sendungen weltweit zu verfolgen. Wir bieten auch Unternehmenslösungen für E-Commerce-Unternehmen an, die eine erweiterte Integration benötigen."
+  }
+}
