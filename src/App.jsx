@@ -11,6 +11,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TrackingResult from './pages/TrackingResult';
 import Blog from './pages/Blog';
 import BlogDetails from './pages/BlogDetails';
+import SEO from './components/SEO';
 
 /**
  * Component to scroll to top on route change
@@ -32,14 +33,94 @@ export default function App() {
           <Navbar />
           <main className="flex-grow">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/track" element={<TrackingResult />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/privacy" element={<PrivacyPolicy />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:id" element={<BlogDetails />} />
-              <Route path="*" element={<Home />} />
+              <Route path="/" element={
+                <>
+                  <SEO 
+                    title="ShipTrack - Real-Time Package Tracking"
+                    description="Track your packages in real-time with ShipTrack. Enter your tracking number for instant updates."
+                    keywords="package tracking, shipment tracking, track my order"
+                    canonicalUrl="https://www.spedizionitrack.it/"
+                  />
+                  <Home />
+                </>
+              } />
+              <Route path="/track" element={
+                <>
+                  <SEO 
+                    title="Track Your Shipment | ShipTrack Tracking Result"
+                    description="View real-time tracking status and location of your package with ShipTrack."
+                    keywords="tracking result, package status, shipment location"
+                    canonicalUrl="https://www.spedizionitrack.it/track"
+                  />
+                  <TrackingResult />
+                </>
+              } />
+              <Route path="/about" element={
+                <>
+                  <SEO 
+                    title="About ShipTrack | Global Package Tracking Platform"
+                    description="Learn about ShipTrack - your trusted partner for global package tracking with 1200+ carriers."
+                    keywords="about us, package tracking company, global logistics"
+                    canonicalUrl="https://www.spedizionitrack.it/about"
+                  />
+                  <About />
+                </>
+              } />
+              <Route path="/contact" element={
+                <>
+                  <SEO 
+                    title="Contact ShipTrack | Support & Help Center"
+                    description="Get in touch with ShipTrack support for any questions about tracking your packages."
+                    keywords="contact support, help center, tracking help"
+                    canonicalUrl="https://www.spedizionitrack.it/contact"
+                  />
+                  <Contact />
+                </>
+              } />
+              <Route path="/privacy" element={
+                <>
+                  <SEO 
+                    title="Privacy Policy | ShipTrack"
+                    description="Read ShipTrack's privacy policy to understand how we protect your data and tracking information."
+                    keywords="privacy policy, data protection, user privacy"
+                    canonicalUrl="https://www.spedizionitrack.it/privacy"
+                  />
+                  <PrivacyPolicy />
+                </>
+              } />
+              <Route path="/blog" element={
+                <>
+                  <SEO 
+                    title="Shipping Blog | Tracking Tips & Guides | ShipTrack"
+                    description="Read the latest shipping guides, tracking tips, and logistics articles from ShipTrack."
+                    keywords="shipping blog, tracking tips, logistics guide"
+                    canonicalUrl="https://www.spedizionitrack.it/blog"
+                  />
+                  <Blog />
+                </>
+              } />
+              <Route path="/blog/:id" element={
+                <>
+                  <SEO 
+                    title="Blog Details | ShipTrack Shipping Insights"
+                    description="Detailed shipping and tracking insights from ShipTrack experts."
+                    keywords="shipping details, tracking insights, logistics articles"
+                    canonicalUrl="https://www.spedizionitrack.it/blog"
+                  />
+                  <BlogDetails />
+                </>
+              } />
+              <Route path="*" element={
+                <>
+                  <SEO 
+                    title="ShipTrack - Package Tracking"
+                    description="Track your packages in real-time with ShipTrack."
+                    keywords="package tracking, shipment tracking"
+                    canonicalUrl="https://www.spedizionitrack.it/"
+                  />
+                  <Home />
+                </>
+              } />
             </Routes>
           </main>
           <Footer />
